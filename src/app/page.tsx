@@ -251,7 +251,7 @@ export default function Home() {
               download="yefet-akua.vcf"
               className={`inline-flex h-12 min-h-12 items-center justify-center rounded-full border border-border-soft bg-surface px-6 text-base font-semibold text-foreground shadow-sm transition-colors hover:border-brand hover:text-brand touch-manipulation ${focusRingClass}`}
             >
-              שמירה לאנשי הקשר (קובץ .vcf)
+              שמירה לאנשי הקשר
             </a>
           </div>
         </section>

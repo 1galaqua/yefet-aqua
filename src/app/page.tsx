@@ -38,6 +38,10 @@ function WhatsAppIcon({ className }: { className?: string }) {
 const focusRingClass =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-background";
 
+/** כפתור ווטסאפ מעוצב בשפה נייטרלית (אין רקע ירוק בהיר); האייקון נשמר כהבחנה עדינה. */
+const whatsappButtonClass =
+  `inline-flex h-12 min-h-12 items-center justify-center gap-2 rounded-full border border-border-soft bg-surface px-6 text-base font-semibold text-foreground shadow-sm transition-colors hover:border-muted hover:bg-background touch-manipulation ${focusRingClass}`;
+
 export default function Home() {
   const site = getSiteOrigin();
   const siteRoot = `${site.origin}/`;
@@ -108,15 +112,17 @@ export default function Home() {
           className="mx-auto flex w-full max-w-4xl flex-col gap-10 px-4 py-12 max-[420px]:px-3 sm:flex-row sm:items-center sm:gap-14 sm:px-8"
           aria-labelledby="hero-heading"
         >
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[min(100%,380px)] overflow-hidden rounded-3xl shadow-lg ring-1 ring-border-soft sm:mx-0 sm:max-w-[320px] sm:flex-shrink-0">
-            <Image
-              src="/images/yefet-akua.png"
-              alt="יפת אקוע, סוכן ביטוח, מתכנן פנסיוני ופיננסי, תמונה מקצועית"
-              fill
-              className="object-cover object-[center_top]"
-              priority
-              sizes="(max-width: 640px) 100vw, 320px"
-            />
+          <div className="relative mx-auto h-[280px] w-[280px] max-w-[min(100vw-2rem,280px)] shrink-0 rounded-full bg-surface p-1.5 shadow-md ring-2 ring-border-soft sm:mx-0 sm:max-w-none sm:h-[296px] sm:w-[296px] md:h-[352px] md:w-[352px] lg:h-[388px] lg:w-[388px]">
+            <div className="relative h-full w-full overflow-hidden rounded-full border-[3px] border-foreground/[0.1] bg-background ring-1 ring-foreground/[0.06]">
+              <Image
+                src="/images/yefet-akua.png"
+                alt="יפת אקוע, סוכן ביטוח, מתכנן פנסיוני ופיננסי, תמונה מקצועית"
+                fill
+                className="object-cover object-[35%_35%]"
+                priority
+                sizes="(max-width: 767px) 304px, 420px"
+              />
+            </div>
           </div>
           <div className="flex flex-col gap-5 text-center sm:grow sm:text-start">
             <p className="text-sm font-medium text-brand">
@@ -137,9 +143,9 @@ export default function Home() {
                 href={CONTACT.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex h-12 min-h-12 items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 text-base font-semibold text-white shadow-sm transition-colors hover:bg-[#1ebe57] touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
+                className={whatsappButtonClass}
               >
-                <WhatsAppIcon className="h-5 w-5 shrink-0" />
+                <WhatsAppIcon className="h-5 w-5 shrink-0 text-[#24745a]" />
                 שלחו ווצאפ
               </a>
               <a
@@ -241,9 +247,9 @@ export default function Home() {
                 href={CONTACT.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex h-12 min-h-12 items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 text-base font-semibold text-white shadow-sm transition-colors hover:bg-[#1ebe57] touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
+                className={whatsappButtonClass}
               >
-                <WhatsAppIcon className="h-5 w-5 shrink-0" />
+                <WhatsAppIcon className="h-5 w-5 shrink-0 text-[#24745a]" />
                 שליחת הודעה בווצאפ
               </a>
             <a

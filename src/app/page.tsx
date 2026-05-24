@@ -112,7 +112,7 @@ export default function Home() {
           className="mx-auto flex w-full max-w-4xl flex-col gap-10 px-4 py-12 max-[420px]:px-3 sm:flex-row sm:items-center sm:gap-14 sm:px-8"
           aria-labelledby="hero-heading"
         >
-          <div className="relative mx-auto h-[280px] w-[280px] max-w-[min(100vw-2rem,280px)] shrink-0 rounded-full bg-surface p-1.5 shadow-md ring-2 ring-border-soft sm:mx-0 sm:max-w-none sm:h-[296px] sm:w-[296px] md:h-[352px] md:w-[352px] lg:h-[388px] lg:w-[388px]">
+          <div className="relative mx-auto h-[248px] w-[248px] max-w-[min(100vw-2rem,248px)] shrink-0 rounded-full bg-surface p-1.5 shadow-md ring-2 ring-border-soft sm:mx-0 sm:max-w-none sm:h-[264px] sm:w-[264px] md:h-[312px] md:w-[312px] lg:h-[344px] lg:w-[344px]">
             <div className="relative h-full w-full overflow-hidden rounded-full border-[3px] border-foreground/[0.1] bg-background ring-1 ring-foreground/[0.06]">
               <Image
                 src="/images/yefet-akua.png"
@@ -120,7 +120,7 @@ export default function Home() {
                 fill
                 className="object-cover object-[35%_35%]"
                 priority
-                sizes="(max-width: 767px) 304px, 420px"
+                sizes="(max-width: 767px) 272px, 380px"
               />
             </div>
           </div>

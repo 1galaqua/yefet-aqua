@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ServiceAreasList } from "@/components/service-areas-list";
+import { SERVICE_AREAS } from "@/constants/service-areas";
 import { getSiteOrigin } from "@/lib/site-origin";
 
 const CONTACT = {
@@ -9,18 +11,6 @@ const CONTACT = {
   email: "yefet.smart@gmail.com",
   whatsappHref: "https://wa.me/972504823319",
 } as const;
-
-const SERVICE_AREAS = [
-  { emoji: "🏥", title: "ביטוח בריאות" },
-  { emoji: "🏦", title: "תוכניות פנסיוניות" },
-  { emoji: "📈", title: "פיננסים והשקעות" },
-  { emoji: "✈️", title: "נסיעות לחול" },
-  { emoji: "❤️", title: "ביטוח חיים" },
-  { emoji: "🏠", title: "ביטוח אלמנטרי" },
-  { emoji: "📁", title: "תיק אישי" },
-  { emoji: "🧮", title: "מחשבון חיסכון לילד" },
-  { emoji: "🌐", title: "רשתות חברתיות" },
-] as const;
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -175,28 +165,7 @@ export default function Home() {
               ליווי והתאמת מוצרים בגישה אישית — לכל תחום אפשר לשוחח עם יפת
               ישירות בווטסאפ או בטלפון.
             </p>
-            <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {SERVICE_AREAS.map(({ emoji, title }) => (
-                <li
-                  key={title}
-                  className="flex items-center gap-4 rounded-2xl border border-border-soft bg-background p-5 shadow-sm"
-                >
-                  <span className="text-3xl" aria-hidden>
-                    {emoji}
-                  </span>
-                  <div className="min-w-0">
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {title}
-                    </h3>
-                    {title === "רשתות חברתיות" && (
-                      <p className="mt-1 text-sm text-muted">
-                        ניתן להעביר קישורים לפרופילים בתיאום עם הסוכן.
-                      </p>
-                    )}
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <ServiceAreasList />
           </div>
         </section>
 

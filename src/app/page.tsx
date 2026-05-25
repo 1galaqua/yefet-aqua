@@ -46,7 +46,7 @@ export default function Home() {
     telephone: CONTACT.phoneE164,
     email: CONTACT.email,
     url: siteRoot,
-    image: `${site.origin}/images/yefet-akua.png`,
+    image: `${site.origin}/images/yefet-aqua.jpg`,
     knowsAbout: SERVICE_AREAS.map((area) => area.title),
     areaServed: {
       "@type": "AdministrativeArea",
@@ -105,10 +105,10 @@ export default function Home() {
           <div className="relative mx-auto size-[140px] max-w-[min(100vw-2rem,140px)] shrink-0 rounded-full bg-surface p-1.5 shadow-md ring-2 ring-border-soft sm:mx-0 sm:max-w-none md:size-[280px] lg:size-[312px]">
             <div className="relative h-full w-full overflow-hidden rounded-full border-[3px] border-foreground/[0.1] bg-background ring-1 ring-foreground/[0.06]">
               <Image
-                src="/images/yefet-akua.png"
+                src="/images/yefet-aqua.jpg"
                 alt="יפת אקוע, סוכן ביטוח, מתכנן פנסיוני ופיננסי, תמונה מקצועית"
                 fill
-                className="object-cover object-[35%_35%] md:object-[center_36%]"
+                className="object-cover object-center"
                 priority
                 sizes="(max-width: 767px) 280px, 640px"
               />

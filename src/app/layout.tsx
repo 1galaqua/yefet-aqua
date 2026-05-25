@@ -57,9 +57,9 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/images/yefet-akua.png",
-        width: 800,
-        height: 1000,
+        url: "/images/yefet-aqua.jpg",
+        width: 1024,
+        height: 1024,
         alt: "יפת אקוע, סוכן ביטוח ומתכנן פנסיוני",
       },
     ],
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TITLE_DEFAULT,
     description: SITE_DESCRIPTION,
-    images: ["/images/yefet-akua.png"],
+    images: ["/images/yefet-aqua.jpg"],
   },
 };
 

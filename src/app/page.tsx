@@ -5,11 +5,14 @@ import { ServiceAreasList } from "@/components/service-areas-list";
 import { SERVICE_AREAS } from "@/constants/service-areas";
 import { getSiteOrigin } from "@/lib/site-origin";
 
+const WHATSAPP_PREFILL =
+  "היי יפת אקוע, הגעתי דרך האתר שלך ואשמח לקבל ייעוץ לגבי הביטוחים שלי 🙂";
+
 const CONTACT = {
   phoneE164: "+972504823319",
   phoneDisplay: "050-4823319",
   email: "yefet.smart@gmail.com",
-  whatsappHref: "https://wa.me/972504823319",
+  whatsappHref: `https://wa.me/972504823319?text=${encodeURIComponent(WHATSAPP_PREFILL)}`,
 } as const;
 
 function WhatsAppIcon({ className }: { className?: string }) {

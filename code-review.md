@@ -21,7 +21,7 @@
 
 2. **נמוך (`styling-patterns`)** — ערכי גודל/bring-to-front ארביטראריים רבים; אופציונלי: טוקנים ב־`globals.css` / `@theme` או Tailwind arbitrary פעם אחת כ־`brand-*`.
 
-3. **נמוך (תחזוקה / DRY)** — מודאלי תוכן (**`pension-programs-dialog`**, **`health-insurance-dialog`**, **`finances-investments-dialog`**, **`life-insurance-dialog`**, **`elementary-insurance-dialog`**, **`social-networks-dialog`**) חוזרים על דפוס: portal, נעילת גלילה, Escape, Overlay. חילוץ ל־`**ContentDialogShell**` משותף יצמצם טעויות עתידיות.
+3. **נמוך (תחזוקה / DRY)** — מודאלי תוכן (**`pension-programs-dialog`**, **`health-insurance-dialog`**, **`finances-investments-dialog`**, **`life-insurance-dialog`**, **`elementary-insurance-dialog`**) חוזרים על דפוס: portal, נעילת גלילה, Escape, Overlay. חילוץ ל־`**ContentDialogShell**` משותף יצמצם טעויות עתידיות.
 
 4. **נמוך (`service-areas-list.tsx`)** — שרשרת ארוכה של **ternaries** על `title`. ברור בעת ההקמה; בשינויי תוכן מתמשך מומלל מפת **configuration** ({ id, emoji, קטגוריה: `'dialog' | 'href' | 'default'` }).
 
@@ -40,7 +40,7 @@
 ## שאלות פתוחות
 
 - האם לכווץ את **meta description** ל־160 תווים או לפצל ל־**shortDescription** + פסקה ארוכה בדף בלבד?
-- האם נדרש **focus trap** אחיד לכל המודאלים (כולל דיאלוג ״אלמנטרי״ ו״רשתות חברתיות״)?
+- האם נדרש **focus trap** אחיד לכל המודאלים (כולל דיאלוג ״אלמנטרי״)?
 
 ## סיכום
 

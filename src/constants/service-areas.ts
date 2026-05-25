@@ -16,10 +16,9 @@ export const SERVICE_AREAS = [
   { emoji: "📈", title: "פיננסים והשקעות" },
   { emoji: "✈️", title: "נסיעות לחול" },
   { emoji: "❤️", title: "ביטוח חיים" },
-  { emoji: "🏠", title: "ביטוח אלמנטרי" },
   { emoji: "📁", title: "תיק אישי" },
   { emoji: "🧮", title: "מחשבון חיסכון לילד" },
-  { emoji: "🌐", title: "רשתות חברתיות" },
+  { emoji: "🏠", title: "ביטוח אלמנטרי" },
 ] as const;
 
 export type ServiceAreaTitle = (typeof SERVICE_AREAS)[number]["title"];

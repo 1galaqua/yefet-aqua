@@ -7,7 +7,6 @@ import { FinancesInvestmentsDialog } from "@/components/finances-investments-dia
 import { HealthInsuranceDialog } from "@/components/health-insurance-dialog";
 import { LifeInsuranceDialog } from "@/components/life-insurance-dialog";
 import { PensionProgramsDialog } from "@/components/pension-programs-dialog";
-import { SocialNetworksDialog } from "@/components/social-networks-dialog";
 import {
   HAREL_TRAVEL_POLICY_URL,
   NOVASAVE_CHILD_SAVINGS_URL,
@@ -24,7 +23,6 @@ export function ServiceAreasList() {
   const [healthDialogOpen, setHealthDialogOpen] = useState(false);
   const [lifeDialogOpen, setLifeDialogOpen] = useState(false);
   const [pensionDialogOpen, setPensionDialogOpen] = useState(false);
-  const [socialDialogOpen, setSocialDialogOpen] = useState(false);
 
   return (
     <>
@@ -198,27 +196,6 @@ export function ServiceAreasList() {
                 </div>
               </a>
             </li>
-          ) : title === "רשתות חברתיות" ? (
-            <li
-              key={title}
-              className="list-none rounded-2xl border border-border-soft bg-background shadow-sm transition-colors hover:border-brand"
-            >
-              <button
-                type="button"
-                className={`flex w-full cursor-pointer touch-manipulation items-center gap-4 p-5 text-start ${focusRingCard}`}
-                aria-haspopup="dialog"
-                onClick={() => setSocialDialogOpen(true)}
-              >
-                <span className="text-3xl" aria-hidden>
-                  {emoji}
-                </span>
-                <div className="min-w-0">
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {title}
-                  </h3>
-                </div>
-              </button>
-            </li>
           ) : (
             <li
               key={title}
@@ -264,11 +241,6 @@ export function ServiceAreasList() {
         key={pensionDialogOpen ? "pension-modal-open" : "pension-modal-idle"}
         open={pensionDialogOpen}
         onClose={() => setPensionDialogOpen(false)}
-      />
-      <SocialNetworksDialog
-        key={socialDialogOpen ? "social-modal-open" : "social-modal-idle"}
-        open={socialDialogOpen}
-        onClose={() => setSocialDialogOpen(false)}
       />
     </>
   );
